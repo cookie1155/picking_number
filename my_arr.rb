@@ -7,5 +7,14 @@ class MyArr
   end
 
   def missing_number
+    ret = nil
+    arr.sort.each_with_index do |number, i|
+      next if number == i + 1
+
+      ret = i + 1
+      break
+    end
+
+    ret
   end
 end
